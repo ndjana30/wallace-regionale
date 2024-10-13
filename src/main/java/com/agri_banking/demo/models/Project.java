@@ -17,8 +17,8 @@ public class Project
     private long id;
     private String name;
     private String description;
-    @ManyToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "project_medias", joinColumns = @JoinColumn(name="project_id", referencedColumnName = "id"),
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "project_medias",  joinColumns = @JoinColumn(name="project_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name="media_id", referencedColumnName = "id"))
     private List<Media> mediaList=new ArrayList<>();
     private long proprietor_id;

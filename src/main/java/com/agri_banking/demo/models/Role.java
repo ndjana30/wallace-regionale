@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Table(name="roles")
 public class Role implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long id;
     private String name;
 }
